@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koko Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="Koko.png" width="400px">
+    <h1>SHANE COMPUTERS</h1>
+    <h2>Installment Calculator</h2>
+    <label for="amount">Total Amount:</label>
+    <input type="number" id="amount" placeholder="Enter total amount" required>
+    <p style="font-size: 0.9em; color: rgb(0, 0, 0);">Note: Koko Chargers Will be added to the total Amount.</p>
+    <input type="text" id="phone" placeholder="Enter Koko Number" required>
+    <button onclick="calculateInstallment()">Calculate Installment</button>
+    
+    <h3 id="result"></h3>
+
+    <div id="installment-details" style="display: none;">
+        <p id="first-month"></p>
+        <p id="second-month"></p>
+        <p id="third-month"></p>
+    </div>
+
+    <button id="checkout" style="display:none;" onclick="sendOrderDetails()">ORDER NOW</button>
+    <script src="Main.js"></script>
+</body>
+</html>
