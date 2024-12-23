@@ -9,7 +9,7 @@ function calculateInstallment() {
     }
 
     // Adding tax
-    const kokoTaxRate = 0.13;
+    const kokoTaxRate = 0.14;
     const totalWithTax = amount + (amount * kokoTaxRate);
     const installment = totalWithTax / 3; // 3 installments
 
