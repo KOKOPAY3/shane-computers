@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #ffb9e9, #84c3ff);
@@ -16,18 +15,19 @@ body {
     padding: 30px;
 }
 
-h1{
+h1 {
     font-size: 3rem;
     color: #333;
     margin-bottom: 25px;
 }
+
 h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 25px;
 }
 
-input[type="number"] {
+input[type="number"], input[type="text"] {
     padding: 15px;
     width: 100%;
     max-width: 350px;
@@ -39,25 +39,7 @@ input[type="number"] {
     transition: border-color 0.3s ease;
 }
 
-input[type="number"]:focus {
-    border-color: #8e0c64;
-}
-
-
-input[type="text"] {
-    padding: 15px;
-    margin-top: 20px;
-    width: 100%;
-    max-width: 350px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    margin-bottom: 25px;
-    font-size: 1.2rem;
-    outline: none;
-    transition: border-color 0.3s ease;
-}
-
-input[type="text"]:focus {
+input[type="number"]:focus, input[type="text"]:focus {
     border-color: #8e0c64;
 }
 
@@ -87,7 +69,7 @@ button:hover {
 #checkout {
     display: block;
     margin-top: 25px;
-    background-color: #8e0c64;
+    background-color: #8e0c64; /* Ensure consistent background color */
     border: none;
     color: white;
     padding: 15px 25px;
@@ -98,8 +80,20 @@ button:hover {
     transition: background-color 0.3s ease;
 }
 
-
 /* Container for Installment Details */
+#installment-details {
+    display: none;
+    padding: 0;
+    margin: 0;
+    background: none; /* Ensure no background color is applied */
+    border: none; /* Remove any unintended border */
+}
+
+#installment-details p {
+    margin: 0; /* Remove margin from the paragraphs */
+    padding: 0; /* Remove padding from the paragraphs */
+}
+
 #result {
     margin-top: 20px;
     padding: 30px; /* Increase padding for a larger box */
@@ -113,43 +107,44 @@ button:hover {
     text-align: center; /* Center the text inside */
 }
 
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    #installment-details p {
-        font-size: 1rem;
-        padding: 8px 15px;
-        max-width: 90%;
-    }
-}
-
+/* Hover effect for checkout button */
 #checkout:hover {
     background-color: #3b0675;
 }
 
+/* Responsive Design */
 @media (max-width: 600px) {
     h2 {
         font-size: 2rem;
     }
-
-    input[type="number"] {
+    
+    input[type="number"], input[type="text"] {
         font-size: 1.1rem;
         width: 100%;
     }
-
+    
+    body {
+        background: linear-gradient(155deg, #ffb9e9, #84c3ff);
+        background-size: 200% 200%; 
+        background-position: center; 
+    }
+    
     button {
         font-size: 1.2rem;
         padding: 12px 20px;
     }
-
+    
     #result {
         font-size: 1.5rem;
     }
-
+    
     #checkout {
         font-size: 1.1rem;
         padding: 12px 20px;
+        background-color: #8e0c64; 
+    }
+    
+    #installment-details {
+        background-color: transparent; 
     }
 }
-
-
