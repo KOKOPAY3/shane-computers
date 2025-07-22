@@ -40,7 +40,7 @@ function sendOrderDetails() {
     }
 
     // Adding tax
-    const kokoTaxRate = 0.14;
+    const kokoTaxRate = 0.0;
     const totalWithTax = amount + (amount * kokoTaxRate);
     const installment = totalWithTax / 3;
 
