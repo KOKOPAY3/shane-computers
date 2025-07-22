@@ -15,7 +15,7 @@ function calculateInstallment() {
 
     // Show installment details inside #result
     document.getElementById('result').innerHTML = `
-        <p><strong>TOTAL WITH KOKO CHARGE:</strong> LKR. ${totalWithTax.toFixed(2)}</p>
+        <p><strong>TOTAL KOKO PAYMENT:</strong> LKR. ${totalWithTax.toFixed(2)}</p>
         <p><strong>3 Monthly Payments</strong></p>
         <p>1 MONTH PAYMENT: LKR. ${installment.toFixed(2)}</p>
         <p>2 MONTH PAYMENT: LKR. ${installment.toFixed(2)}</p>
